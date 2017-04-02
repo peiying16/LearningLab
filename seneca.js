@@ -5,15 +5,15 @@
  * Given a string `email`, return `true` if the string is in the form
  * of a valid Seneca College email address, `false` othewise.
  */
-exports.isValidEmail = function (email){
+exports.isValidEmail = function (email) {
 
-  if ( typeof(email) === 'undefined') {
+  if (typeof(email) === 'undefined') {
     return false;
   }
-  if ( typeof(email) !== 'string' ) {
+  if (typeof(email) !== 'string') {
     return false;
   }
-  if (email==='') {
+  if (email === '') {
     return false;
   }
 
@@ -39,10 +39,10 @@ exports.formatSenecaEmail = function (name) {
   if (name === '') {
     return null;
   }
-  if (/ /.test(name)) {
+  if (/\s/.test(name)) {
     return null;
   }
-  if (/  /.test(name)) {
+  if (/\t/.test(name)) {
     return null;
   }
   return name.concat('@myseneca.ca');

@@ -51,9 +51,9 @@ describe('seneca.formatSenecaEmail()', function() {
     var name = "asd asd";
     expect(seneca.formatSenecaEmail(name)).toBe(null);
   });
-  
+
   test('name contains tab', function() {
-    var name = "asd   asd";
+    var name = "asd" + \t +"asd";
     expect(seneca.formatSenecaEmail(name)).toBe(null);
   });
 
