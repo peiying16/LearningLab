@@ -6,10 +6,10 @@
  * of a valid Seneca College email address, `false` othewise.
  */
 exports.isValidEmail = function (email) {
-  if (typeof(email) === 'undefined') {
+  if ( typeof(email) === 'undefined') {
     return false;
   }
-  if (typeof(email) !== 'string') {
+  if ( typeof(email) !== 'string') {
     return false;
   }
   if (email === '') {
