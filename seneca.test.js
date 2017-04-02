@@ -53,7 +53,7 @@ describe('seneca.formatSenecaEmail()', function() {
   });
 
   test('name contains tab', function() {
-    var name = "asd" + \t +"asd";
+    var name = "asd\tasd";
     expect(seneca.formatSenecaEmail(name)).toBe(null);
   });
 
