@@ -18,11 +18,11 @@ exports.isValidEmail = function (email){
   }
 
   //leading write space
-  if(email[0] === ' ') {
+  if (email[0] === ' ') {
     return false;
   }
 
-  if(/@myseneca.ca$/.test(email) || /@senecacollege.ca$/.test(email) || /@senecac.on.ca$/.test(email)) {
+  if (/@myseneca.ca$/.test(email) || /@senecacollege.ca$/.test(email) || /@senecac.on.ca$/.test(email)) {
     return true;
   }
   return false;
@@ -39,10 +39,10 @@ exports.formatSenecaEmail = function (name) {
   if (name === '') {
     return null;
   }
-  if(/ /.test(name)) {
+  if (/ /.test(name)) {
     return null;
   }
-  if(/  /.test(name)) {
+  if (/  /.test(name)) {
     return null;
   }
   return name.concat('@myseneca.ca');
